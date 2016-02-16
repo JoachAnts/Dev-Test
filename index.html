@@ -49,7 +49,9 @@
 			</div>
 			<div id="filter-bar" class="row">
 				<div id="site-filter" class="col-sm-2">
-					<select id="site-menu" class="form-control"></select>
+					<select id="site-menu" class="form-control">
+						<option value="" selected>Select a site</option>
+					</select>
 				</div>
 				<div id="result-filter" class="col-sm-4">
 					<span style="padding-right:5px;">Between</span>
@@ -61,7 +63,7 @@
 					<input id="daterangeinput" class="form-control" name="daterange" />
 				</div>
 				<div class="col-sm-2">
-					<button class="btn">Reset All Filters</button>
+					<button id="reset-filter-button" class="btn" style="font-size:12px;">Reset All Filters</button>
 				</div>
 			</div>
 			<div class="table-responsive">
