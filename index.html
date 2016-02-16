@@ -17,30 +17,8 @@
 		<script src="http://ajax.aspnetcdn.com/ajax/mobileservices/MobileServices.Web-1.2.7.min.js"></script>
 		
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<script>
-			var sites = [];
-			$(document).ready(function() {
-				$('input[name="daterange"]').daterangepicker();
-				sites = ["Workshop", "Yard", "Warehouse"];
-				for (var i = 0; i < sites.length; i++) {
-					$('#site-menu').append($('<option value="'+sites[i].toLowerCase()+'">'+sites[i]+'</option>'));
-				}
-				$('#data-table').tablesorter();
-			});
-			
-			/*
-			var MobileServiceClient = WindowsAzure.MobileServiceClient;
-			var client = new MobileServiceClient('',
-						'');
-			var userTable = client.getTable('devTestUser');
-			
-			var query = userTable.where({}).read().done(function(results) {
-				alert("Done");
-			}, function(err) {
-				alert(err);
-			});
-			*/
-		</script>
+		<script type="text/javascript" src="script.js"></script>
+		
 		<title>User Data</title>
 	</head>
 	<body>
