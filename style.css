@@ -1,0 +1,83 @@
+/* Table orange: #F87E4C*/
+
+body {
+	background-color: #353f4b;
+}
+
+span {
+	color: white;
+}
+
+#search-bar-container {
+	width: 70%;
+	height: 50px;
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#search-bar {
+	width: 237px;
+	float: right;
+	margin: 0;
+	padding: 0;
+}
+
+#search-field {
+	margin-right: -4px;
+}
+
+#search-button {
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+#filter-bar div {
+	display: inline;
+}
+
+#site-filter {
+	width: 100px;
+	margin: 0;
+	height: auto;
+}
+
+#result-filter {
+	width: 200px;
+	margin: 0;
+}
+
+#filter-bar {
+	width: 70%;
+	margin: auto;
+	padding: 30px;
+	border-top: thin solid gray;
+	border-bottom: thin solid gray;
+}
+
+#data-table {
+	width: 70%;
+	border: 5px solid #F87E4C;
+	background-color: snow;
+	margin: auto;
+	margin-top: 10px;
+	border-collapse: collapse;
+}
+
+#data-table th {
+	color: #F87E4C;
+	cursor: pointer;
+}
+
+#data-table .headerSortUp {
+	background-color: #003322;
+}
+
+#data-table .headerSortDown {
+	background-color: #220033;
+}
+
+#data-table td, #data-table th {
+	border: 2px solid #F87E4C;
+	padding: 7px;
+}
