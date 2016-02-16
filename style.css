@@ -8,59 +8,38 @@ span {
 	color: white;
 }
 
-#search-bar-container {
-	width: 70%;
-	height: 50px;
-	margin: 0 auto;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
 #search-bar {
-	width: 237px;
-	float: right;
-	margin: 0;
-	padding: 0;
+	padding: 0px;
 }
 
 #search-field {
-	margin-right: -4px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+#search-button-container {
+	padding-left: 0px;
 }
 
 #search-button {
-	border-top-right-radius: 10px;
-	border-bottom-right-radius: 10px;
-}
-
-#filter-bar div {
-	display: inline;
-}
-
-#site-filter {
-	width: 100px;
-	margin: 0;
-	height: auto;
-}
-
-#result-filter {
-	width: 200px;
-	margin: 0;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
 }
 
 #filter-bar {
-	width: 70%;
-	margin: auto;
-	padding: 30px;
-	border-top: thin solid gray;
+	padding-bottom: 12px;
 	border-bottom: thin solid gray;
+	margin-bottom: 12px;
+}
+
+.result-range-box {
+	display:inline;
+	width: 45px;
 }
 
 #data-table {
-	width: 70%;
 	border: 5px solid #F87E4C;
 	background-color: snow;
-	margin: auto;
-	margin-top: 10px;
 	border-collapse: collapse;
 }
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<!-- Include Required Prerequisites -->
 		<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
@@ -22,62 +22,88 @@
 		<title>User Data</title>
 	</head>
 	<body>
-		<div id="search-bar-container">
-			<div id="search-bar">
-				<span>Search by First / Last Name</span>
-				<input id="search-field" type="search" placeholder="First / Last Name"></input>
-				<button id="search-button">Search</button>
+		<div class="container">
+			<div class="row" style="padding-top:20px;padding-bottom:3px;">
+				<div class="col-sm-7"></div>
+				<span><strong>Search by First / Last Name</strong></span>
+			</div>
+			<div id="search-bar-container" class="row" style="padding-bottom:20px;">
+				<div class="col-sm-7"></div>
+				<div id="search-bar" class="col-sm-3">
+					<input id="search-field" class="form-control" type="search" placeholder="First / Last Name"></input>
+				</div>
+				<div id="search-button-container" class="col-sm-2">
+					<button id="search-button" class="btn">Search</button>
+				</div>
+			</div>
+			<div class="row" style="padding-top:6px;padding-bottom:3px;border-top:thin solid gray;">
+				<div class="col-sm-2">
+					<span><strong>Filter by site</strong></span>
+				</div>
+				<div class="col-sm-4">
+					<span><strong>Filter by test result</strong></span>
+				</div>
+				<div class="col-sm-4">
+					<span><strong>Filter by Test Date Range</strong></span>
+				</div>
+			</div>
+			<div id="filter-bar" class="row">
+				<div id="site-filter" class="col-sm-2">
+					<select id="site-menu" class="form-control"></select>
+				</div>
+				<div id="result-filter" class="col-sm-4">
+					<span style="padding-right:5px;">Between</span>
+					<input class="form-control result-range-box" type="text" placeholder="0"></input>
+					<span style="padding-left:5px;padding-right:5px;">and</span>
+					<input class="form-control result-range-box" type="text" placeholder="20"></input>
+				</div>
+				<div class="col-sm-4">
+					<input id="daterangeinput" class="form-control" name="daterange" />
+				</div>
+				<div class="col-sm-2">
+					<button class="btn">Reset All Filters</button>
+				</div>
+			</div>
+			<div class="table-responsive">
+				<table id="data-table" class="table">
+					<thead>
+					<tr>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Site</th>
+						<th>Date Joined</th>
+						<th>Test Result</th>
+						<th>Test Date</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>John</td>
+						<td>Smith</td>
+						<td>Workshop</td>
+						<td>10/01/2016</td>
+						<td>19/20</td>
+						<td>08/02/2016</td>
+					<tr>
+					<tr>
+						<td>Mike</td>
+						<td>Rower</td>
+						<td>Warehouse</td>
+						<td>14/11/2015</td>
+						<td>14/20</td>
+						<td>06/02/2016</td>
+					<tr>
+					<tr>
+						<td>Jenny</td>
+						<td>Walters</td>
+						<td>Yard</td>
+						<td>06/01/2016</td>
+						<td>17/20</td>
+						<td>06/02/2016</td>
+					<tr>
+					</tbody>
+				</table>
 			</div>
 		</div>
-		<div id="filter-bar">
-			<div id="site-filter">
-				<span>Filter by site</span>
-				<select id="site-menu"></select>
-			</div>
-			<div id="result-filter">
-				<span>Filter by test result</span>
-				<span>Between</span><input type="text"></input><span>and</span><input type="text"></input>
-			</div>
-			<input id="daterangeinput" name="daterange" />
-			<button>Reset All Filters</button>
-		</div>
-		<table id="data-table">
-			<thead>
-			<tr>
-				<th>First Name</th>
-				<th>Last Name</th>
-				<th>Site</th>
-				<th>Date Joined</th>
-				<th>Test Result</th>
-				<th>Test Date</th>
-			</tr>
-			</thead>
-			<tbody>
-			<tr>
-				<td>John</td>
-				<td>Smith</td>
-				<td>Workshop</td>
-				<td>10/01/2016</td>
-				<td>19/20</td>
-				<td>08/02/2016</td>
-			<tr>
-			<tr>
-				<td>Mike</td>
-				<td>Rower</td>
-				<td>Warehouse</td>
-				<td>14/11/2015</td>
-				<td>14/20</td>
-				<td>06/02/2016</td>
-			<tr>
-			<tr>
-				<td>Jenny</td>
-				<td>Walters</td>
-				<td>Yard</td>
-				<td>06/01/2016</td>
-				<td>17/20</td>
-				<td>06/02/2016</td>
-			<tr>
-			</tbody>
-		</table>
 	</body>
 </html>
