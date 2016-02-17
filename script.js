@@ -15,6 +15,7 @@ var query = userTable.where({}).read().done(function(results) {
 */
 
 function resetAllFilters() {
+	dataList.search();
 	dataList.filter();
 	$('#site-menu').prop('selectedIndex', 0);
 	$('.result-range-box').val('');
@@ -22,6 +23,19 @@ function resetAllFilters() {
 
 function searchTable() {
 	dataList.search($('#search-field').val(), ['firstName', 'lastName']);
+}
+
+function filterTestResult() {
+	dataList.filter(function(item) {
+		console.log($('#lower-range').val()=='');
+		var testResult = item.values().testResult.split('/')[0];
+		var lower = ($('#lower-range').val() == '') ? '0' : $('#lower-range').val();
+		var upper = ($('#upper-range').val() == '') ? '20' : $('#upper-range').val();
+		console.log(lower);
+		if (parseInt(testResult) >= parseInt(lower) && parseInt(testResult) <= parseInt(upper))
+			return true;
+		return false;
+	});
 }
 
 $(document).ready(function() {	
@@ -40,6 +54,13 @@ $(document).ready(function() {
 	
 	$('#search-button').click(searchTable);
 	$('#search-field').keyup(searchTable);
+	$('#lower-range').keyup(filterTestResult);
+	$('#upper-range').keyup(filterTestResult);
+	
+	$('#site-menu').change(function() {
+		dataList.search(document.getElementById('site-menu').value, ['site']);
+		console.log(document.getElementById('site-menu').value);
+	});
 	
 	$('#daterangeinput').daterangepicker({
 			locale: {

@@ -6,9 +6,9 @@
 - [x] Table sorting
 - [x] Optimized for mobile
 - [x] Searchable table
+- [x] Table filtering
 - [ ] Data retrieval from Azure server (currently getting request denied)
 - [ ] Table pagination
-- [ ] Table filtering
 
 ## Instructions
 
