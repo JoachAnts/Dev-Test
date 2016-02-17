@@ -15,6 +15,7 @@ var query = userTable.where({}).read().done(function(results) {
 */
 
 function resetAllFilters() {
+	dataList.filter();
 	$('#site-menu').prop('selectedIndex', 0);
 	$('.result-range-box').val('');
 }
@@ -40,6 +41,31 @@ $(document).ready(function() {
 	$('#search-button').click(searchTable);
 	$('#search-field').keyup(searchTable);
 	
-	$('#daterangeinput').daterangepicker();
-	$('#id1').daterangepicker();
+	$('#daterangeinput').daterangepicker({
+			locale: {
+				format: 'DD/MM/YYYY'
+			}
+		},
+		function(start, end, label) {
+			dataList.filter(function(item) {
+				console.log(start);
+				var parts = item.values().dateJoined.split("/");
+				var itemDate = new Date(parseInt(parts[2], 10),
+					parseInt(parts[1], 10) - 1,
+					parseInt(parts[0], 10));
+				parts = start.format('DD/MM/YYYY').split("/");
+				var startDate = new Date(parseInt(parts[2], 10),
+					parseInt(parts[1], 10) - 1,
+					parseInt(parts[0], 10));	
+				parts = end.format('DD/MM/YYYY').split("/");
+				var endDate = new Date(parseInt(parts[2], 10),
+					parseInt(parts[1], 10) - 1,
+					parseInt(parts[0], 10));
+				if (itemDate >= startDate && itemDate <= endDate)
+					return true;
+				else
+					return false;
+			});
+		}
+	);
 });
