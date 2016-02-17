@@ -6,64 +6,77 @@
 		<script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/bootstrap/latest/css/bootstrap.css" />
 		
-		<script type="text/javascript" src="__jquery.tablesorter/jquery.tablesorter.js"></script> 
+		<script type="text/javascript" src="__jquery.tablesorter/jquery.tablesorter.js"></script>
 		 
 		<!-- Include Date Range Picker -->
 		<!-- Source: http://www.daterangepicker.com/ -->
 		<script type="text/javascript" src="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
-		<link rel="stylesheet" type="text/css" href "http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
+		<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
 		
 		<!-- Azure Mobile Services -->
-		<script src="http://ajax.aspnetcdn.com/ajax/mobileservices/MobileServices.Web-1.2.7.min.js"></script>
+		<<script src="http://ajax.aspnetcdn.com/ajax/mobileservices/MobileServices.Web-1.2.7.min.js"></script>
 		
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<script type="text/javascript" src="script.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('#id1').daterangepicker();
+			});
+		</script>
 		
 		<title>User Data</title>
 	</head>
 	<body>
 		<div class="container">
-			<div class="row" style="padding-top:20px;padding-bottom:3px;">
-				<div class="col-sm-7"></div>
-				<span><strong>Search by First / Last Name</strong></span>
-			</div>
-			<div id="search-bar-container" class="row" style="padding-bottom:20px;">
-				<div class="col-sm-7"></div>
-				<div id="search-bar" class="col-sm-3">
-					<input id="search-field" class="form-control" type="search" placeholder="First / Last Name"></input>
-				</div>
-				<div id="search-button-container" class="col-sm-2">
-					<button id="search-button" class="btn">Search</button>
-				</div>
-			</div>
-			<div class="row" style="padding-top:6px;padding-bottom:3px;border-top:thin solid gray;">
-				<div class="col-sm-2">
-					<span><strong>Filter by site</strong></span>
-				</div>
-				<div class="col-sm-4">
-					<span><strong>Filter by test result</strong></span>
-				</div>
-				<div class="col-sm-4">
-					<span><strong>Filter by Test Date Range</strong></span>
+			<div id="search-bar-container" class="row" style="padding-bottom:20px;">				
+				<div id="search-bar" class="col-xs-12 col-sm-6 col-sm-offset-6">
+					<div class="reset-header">
+						<span><strong>Search by First / Last Name</strong></span>
+					</div>
+					<div class="row">
+						<div class="col-xs-9" style="padding-right:0px;">
+							<input id="search-field" class="form-control" type="search" placeholder="First / Last Name"></input>
+						</div>
+						<div class="col-xs-3" style="padding-left:0px;">
+							<button id="search-button" class="btn">Search</button>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div id="filter-bar" class="row">
-				<div id="site-filter" class="col-sm-2">
-					<select id="site-menu" class="form-control">
-						<option value="" selected>Select a site</option>
-					</select>
-				</div>
-				<div id="result-filter" class="col-sm-4">
-					<span style="padding-right:5px;">Between</span>
-					<input class="form-control result-range-box" type="text" placeholder="0"></input>
-					<span style="padding-left:5px;padding-right:5px;">and</span>
-					<input class="form-control result-range-box" type="text" placeholder="20"></input>
-				</div>
-				<div class="col-sm-4">
-					<input id="daterangeinput" class="form-control" name="daterange" />
-				</div>
-				<div class="col-sm-2">
-					<button id="reset-filter-button" class="btn" style="font-size:12px;">Reset All Filters</button>
+			<div id="border-div">
+				<div id="filter-bar" class="row">
+					<div id="site-filter" class="col-sm-6 col-md-2">
+						<div class="reset-header">
+							<span><strong>Filter by site</strong></span>
+						</div>
+						<div>
+							<select id="site-menu" class="form-control">
+								<option value="" selected>Select a site</option>
+							</select>
+						</div>
+					</div>
+					<div id="result-filter" class="col-sm-6 col-md-4">
+						<div class="reset-header">
+							<span><strong>Filter by test result</strong></span>
+						</div>
+						<div>
+							<span style="padding-right:5px;">Between</span>
+							<input class="form-control result-range-box" type="text" placeholder="0"></input>
+							<span style="padding-left:5px;padding-right:5px;">and</span>
+							<input class="form-control result-range-box" type="text" placeholder="20"></input>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-4">
+						<div class="reset-header">
+							<span><strong>Filter by Test Date Range</strong></span>
+						</div>
+						<div>
+							<input id="daterangeinput" class="form-control" type="text" />
+						</div>
+					</div>
+					<div id="reset-btn-container" class="col-sm-12 col-md-2">
+						<button id="reset-filter-button" class="btn" style="font-size:11px;">Reset All Filters</button>
+					</div>
 				</div>
 			</div>
 			<div class="table-responsive">
@@ -105,7 +118,7 @@
 					<tr>
 					</tbody>
 				</table>
-			</div>
+			</div>			
 		</div>
 	</body>
 </html>

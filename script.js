@@ -17,10 +17,7 @@ function resetAllFilters() {
 	$('.result-range-box').val('');
 }
 
-$(document).ready(function() {
-
-	$('input[name="daterange"]').daterangepicker();
-	
+$(document).ready(function() {	
 	for (var i = 0; i < sites.length; i++) {
 		$('#site-menu').append($('<option value="'+sites[i].toLowerCase()+'">'+sites[i]+'</option>'));
 	}
@@ -28,5 +25,6 @@ $(document).ready(function() {
 	$('#data-table').tablesorter();
 	
 	$('#reset-filter-button').click(resetAllFilters);
-	
+	$('#daterangeinput').daterangepicker();
+	$('#id1').daterangepicker();
 });
