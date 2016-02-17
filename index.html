@@ -16,13 +16,10 @@
 		<!-- Azure Mobile Services -->
 		<<script src="http://ajax.aspnetcdn.com/ajax/mobileservices/MobileServices.Web-1.2.7.min.js"></script>
 		
+		<script type="text/javascript" src="list.js"></script>
+		
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<script type="text/javascript" src="script.js"></script>
-		<script>
-			$(document).ready(function() {
-				$('#id1').daterangepicker();
-			});
-		</script>
 		
 		<title>User Data</title>
 	</head>
@@ -79,7 +76,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="table-responsive">
+			<div id="table-container" class="table-responsive">
 				<table id="data-table" class="table">
 					<thead>
 					<tr>
@@ -91,30 +88,30 @@
 						<th>Test Date</th>
 					</tr>
 					</thead>
-					<tbody>
+					<tbody class="list">
 					<tr>
-						<td>John</td>
-						<td>Smith</td>
-						<td>Workshop</td>
-						<td>10/01/2016</td>
-						<td>19/20</td>
-						<td>08/02/2016</td>
-					<tr>
-					<tr>
-						<td>Mike</td>
-						<td>Rower</td>
-						<td>Warehouse</td>
-						<td>14/11/2015</td>
-						<td>14/20</td>
-						<td>06/02/2016</td>
+						<td class="firstName">John</td>
+						<td class="lastName">Smith</td>
+						<td class="site">Workshop</td>
+						<td class="dateJoined">10/01/2016</td>
+						<td class="testResult">19/20</td>
+						<td class="testDate">08/02/2016</td>
 					<tr>
 					<tr>
-						<td>Jenny</td>
-						<td>Walters</td>
-						<td>Yard</td>
-						<td>06/01/2016</td>
-						<td>17/20</td>
-						<td>06/02/2016</td>
+						<td class="firstName">Mike</td>
+						<td class="lastName">Rower</td>
+						<td class="site">Warehouse</td>
+						<td class="dateJoined">14/11/2015</td>
+						<td class="testResult">14/20</td>
+						<td class="testDate">06/02/2016</td>
+					<tr>
+					<tr>
+						<td class="firstName">Jenny</td>
+						<td class="lastName">Walters</td>
+						<td class="site">Yard</td>
+						<td class="dateJoined">06/01/2016</td>
+						<td class="testResult">17/20</td>
+						<td class="testDate">06/02/2016</td>
 					<tr>
 					</tbody>
 				</table>

@@ -9,7 +9,7 @@ span {
 }
 
 .container {
-	max-width: 800px;
+	max-width: 850px;
 }
 
 #search-field {
@@ -43,6 +43,7 @@ span {
 
 #reset-btn-container {
 	margin-top: 32px;
+	text-align: center;
 }
 
 #reset-filter-button {
@@ -57,7 +58,7 @@ span {
 
 @media (max-width: 978px) {
     #reset-btn-container {
-		margin-top: 15px;
+		margin-top: 20px;
 	}
 }
 
