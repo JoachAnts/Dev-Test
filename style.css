@@ -77,12 +77,10 @@ span {
 	cursor: pointer;
 }
 
-#data-table .headerSortUp {
-	background-color: #003322;
+#data-table th.headerSortUp {
 }
 
-#data-table .headerSortDown {
-	background-color: #220033;
+#data-table th.headerSortDown {
 }
 
 #data-table td, #data-table th {
